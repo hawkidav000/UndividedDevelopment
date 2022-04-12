@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://DraggableSprite.tscn" type="PackedScene" id=2]
+[ext_resource path="res://dropzone.gd" type="Script" id=3]
+[ext_resource path="res://dropzone.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="Icon"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D"]
+shape = SubResource( 1 )
+
+[node name="dropzone" parent="." instance=ExtResource( 4 )]
+
+[node name="Area2D" parent="dropzone" instance=ExtResource( 2 )]
+
+[connection signal="input_event" from="Icon/Area2D" to="." method="_on_Area2D_input_event"]

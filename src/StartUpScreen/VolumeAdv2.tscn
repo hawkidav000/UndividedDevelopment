@@ -1,0 +1,407 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://src/StartUpScreen/Go_Back_Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://volume-jar.png" type="Texture" id=2]
+[ext_resource path="res://test_gravity.gd" type="Script" id=3]
+[ext_resource path="res://assets/soda_shop.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/VolumeRectanglePrism.jpg" type="Texture" id=6]
+[ext_resource path="res://src/StartUpScreen/HelpButton.gd" type="Script" id=7]
+[ext_resource path="res://src/StartUpScreen/VolumeEnterButton.gd" type="Script" id=8]
+[ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=9]
+[ext_resource path="res://src/StartUpScreen/VolumeAdvLinkButton.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 94, 1.25 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 2.5, 93.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 34.0032, 4.5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 36
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 21
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 36
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 21
+outline_size = 1
+outline_color = Color( 0.0509804, 0.0431373, 0.0431373, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 36
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 25
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 30
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 29
+font_data = ExtResource( 5 )
+
+[node name="Node2D2" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 533, 323 )
+z_index = 1
+
+[node name="Volume-jar" type="Sprite" parent="KinematicBody2D"]
+visible = false
+position = Vector2( 0.499998, -109 )
+scale = Vector2( 0.602122, 0.504167 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -2, -5 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 86, -90 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -148, -96 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( -123, -9 )
+rotation = 0.15708
+shape = SubResource( 3 )
+
+[node name="Polygon2D" type="Polygon2D" parent="KinematicBody2D"]
+position = Vector2( -15.0084, -0.592834 )
+scale = Vector2( 0.450767, 0.991436 )
+z_index = -1
+color = Color( 1, 0, 0, 0.490196 )
+polygon = PoolVector2Array( -315, -186, -315, -6, -170, 4, -170, -176 )
+
+[node name="Line2D" type="Line2D" parent="KinematicBody2D/Polygon2D"]
+z_index = -1
+points = PoolVector2Array( -315.019, -186.598, -168.602, -176.512 )
+width = 5.0
+
+[node name="Line2D2" type="Line2D" parent="KinematicBody2D/Polygon2D"]
+position = Vector2( 0, 181.555 )
+z_index = -1
+points = PoolVector2Array( -315.019, -186.598, -168.602, -176.512 )
+width = 5.0
+
+[node name="Line2D5" type="Line2D" parent="KinematicBody2D/Polygon2D"]
+position = Vector2( 330.548, 2.06111 )
+scale = Vector2( 2.21844, 1.0196 )
+z_index = -1
+points = PoolVector2Array( -291, -186, -291, -6 )
+width = 5.0
+
+[node name="Polygon2D2" type="Polygon2D" parent="KinematicBody2D"]
+position = Vector2( 199.992, 9.40717 )
+z_index = -1
+color = Color( 1, 0, 0, 0.490196 )
+polygon = PoolVector2Array( -291, -186, -291, -6, -105, -6, -105, -186 )
+
+[node name="Line2D" type="Line2D" parent="KinematicBody2D/Polygon2D2"]
+z_index = -1
+points = PoolVector2Array( -291, -186, -291, -6 )
+width = 5.0
+
+[node name="Line2D3" type="Line2D" parent="KinematicBody2D/Polygon2D2"]
+position = Vector2( 187, 0 )
+z_index = -1
+points = PoolVector2Array( -291, -186, -291, -3 )
+width = 5.0
+
+[node name="Line2D2" type="Line2D" parent="KinematicBody2D/Polygon2D2"]
+z_index = -1
+points = PoolVector2Array( -291, -5, -105, -5 )
+width = 5.0
+
+[node name="Line2D4" type="Line2D" parent="KinematicBody2D/Polygon2D2"]
+position = Vector2( 0, -181 )
+z_index = -1
+points = PoolVector2Array( -291, -5, -102, -5 )
+width = 5.0
+
+[node name="SceneBackground" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.466667 )
+position = Vector2( 592.545, 302 )
+scale = Vector2( 1.14394, 1.14394 )
+z_index = -2
+texture = ExtResource( 4 )
+
+[node name="BackgroundPolygon" type="Polygon2D" parent="."]
+position = Vector2( -168, -879 )
+scale = Vector2( 1.22007, 1.22007 )
+z_index = -3
+polygon = PoolVector2Array( 138, 721, 1377, 721, 1377, 1289, 138, 1289 )
+
+[node name="BackButton" parent="." instance=ExtResource( 1 )]
+margin_left = 900.111
+margin_top = 528.24
+margin_right = 994.111
+margin_bottom = 582.24
+disabled = true
+reference_path = "res://src/StartUpScreen/AdvancedMap2.tscn"
+
+[node name="QuestionPromptBackground" type="ColorRect" parent="."]
+margin_left = 27.0
+margin_top = 404.0
+margin_right = 498.0
+margin_bottom = 516.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaQuestionPrompt" type="RichTextLabel" parent="."]
+margin_left = 41.0
+margin_top = 423.0
+margin_right = 492.0
+margin_bottom = 526.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "Mr. Tim asks for your help filling up his cooler with ice. Click your mouse to fill the cooler. What is the volume of the cooler?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaUserAnswer" type="LineEdit" parent="."]
+margin_left = 524.0
+margin_top = 404.0
+margin_right = 995.0
+margin_bottom = 516.0
+custom_fonts/font = SubResource( 5 )
+align = 1
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpButton" type="Button" parent="."]
+margin_left = 404.0
+margin_top = 528.0
+margin_right = 498.0
+margin_bottom = 582.0
+custom_fonts/font = SubResource( 6 )
+text = "Help"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpWindowDialog" type="WindowDialog" parent="HelpButton"]
+visible = true
+margin_left = -368.0
+margin_top = -480.0
+margin_right = 600.0
+margin_bottom = 51.0
+custom_fonts/title_font = SubResource( 7 )
+popup_exclusive = true
+window_title = "Help Window"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpWindowBackground" type="ColorRect" parent="HelpButton/HelpWindowDialog"]
+margin_top = 2.0
+margin_right = 968.0
+margin_bottom = 534.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HintRichTextLabel" type="RichTextLabel" parent="HelpButton/HelpWindowDialog"]
+margin_left = 50.0
+margin_top = 147.0
+margin_right = 468.0
+margin_bottom = 392.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 8 )
+text = "Hint:
+In the rectangular prism on the right, you calculate the volume by multiplying the height, width, and length together."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YoutubeTutorialButton" type="LinkButton" parent="HelpButton/HelpWindowDialog"]
+margin_left = 144.0
+margin_top = 482.0
+margin_right = 309.0
+margin_bottom = 515.0
+focus_mode = 2
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 9 )
+text = "Watch Tutorial"
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AreaHintImage" type="Sprite" parent="HelpButton/HelpWindowDialog"]
+position = Vector2( 705, 257 )
+scale = Vector2( 0.550344, 0.550344 )
+texture = ExtResource( 6 )
+
+[node name="EnterButton" type="Button" parent="."]
+margin_left = 779.0
+margin_top = 528.0
+margin_right = 873.0
+margin_bottom = 582.0
+custom_fonts/font = SubResource( 10 )
+text = "Enter"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorrectWindowDialog" type="WindowDialog" parent="EnterButton"]
+margin_left = -719.0
+margin_top = -486.0
+margin_right = -183.0
+margin_bottom = -314.0
+window_title = "-- Correct --"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorrectColorRect" type="ColorRect" parent="EnterButton/CorrectWindowDialog"]
+margin_right = 536.0
+margin_bottom = 172.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorrectRichTextLabel" type="RichTextLabel" parent="EnterButton/CorrectWindowDialog"]
+anchor_left = 0.118
+anchor_top = 0.174
+anchor_right = 0.118
+anchor_bottom = 0.174
+margin_left = -28.248
+margin_top = 9.072
+margin_right = 433.752
+margin_bottom = 92.072
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 11 )
+text = "Great job! You completed this stage. Move on to the next stage on the map. You're doing great!"
+
+[node name="IncorrectWindowDialog" type="WindowDialog" parent="EnterButton"]
+margin_left = 294.0
+margin_top = -402.0
+margin_right = 755.0
+margin_bottom = -201.0
+window_title = "-- Incorrect --"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IncorrectColorRect" type="ColorRect" parent="EnterButton/IncorrectWindowDialog"]
+margin_right = 460.0
+margin_bottom = 200.0
+
+[node name="IncorrectRichTextLabel" type="RichTextLabel" parent="EnterButton/IncorrectWindowDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -167.5
+margin_top = -57.0
+margin_right = 167.5
+margin_bottom = 57.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 12 )
+text = "Good try...give it another shot. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NoAttemptsWindowDialog" type="WindowDialog" parent="EnterButton"]
+margin_left = 301.0
+margin_top = -114.0
+margin_right = 762.0
+margin_bottom = 87.0
+window_title = "-- Out of Attempts --"
+
+[node name="NoAttemptsColorRect" type="ColorRect" parent="EnterButton/NoAttemptsWindowDialog"]
+margin_right = 460.0
+margin_bottom = 200.0
+
+[node name="NoAttemptsRichTextLabel" type="RichTextLabel" parent="EnterButton/NoAttemptsWindowDialog"]
+margin_left = 54.0
+margin_top = 40.0
+margin_right = 404.0
+margin_bottom = 160.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 13 )
+text = "Good try. Sadly, you're out of attempts. Go ahead try another challenge."
+
+[node name="SceneMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+volume_db = 1.0
+autoplay = true
+
+[node name="LengthRichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 507.0
+margin_top = 334.0
+margin_right = 588.0
+margin_bottom = 374.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 14 )
+text = "L = 5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WidthRichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 345.0
+margin_top = 328.0
+margin_right = 441.0
+margin_bottom = 368.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 14 )
+text = "W = 2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeightRichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 301.0
+margin_top = 217.0
+margin_right = 393.0
+margin_bottom = 257.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 14 )
+text = "H = 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="HelpButton/HelpWindowDialog/YoutubeTutorialButton" to="HelpButton/HelpWindowDialog/YoutubeTutorialButton" method="_on_LinkButton_pressed"]

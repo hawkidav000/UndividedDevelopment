@@ -1,0 +1,237 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/scripts/NETXButton.gd" type="Script" id=1]
+[ext_resource path="res://assets/city_hall_background.png" type="Texture" id=2]
+[ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/Trapezoid.png" type="Texture" id=5]
+[ext_resource path="res://src/scripts/PeriBeginnerFinal.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="CityHallBackground" type="Sprite" parent="."]
+position = Vector2( 519, 296.5 )
+scale = Vector2( 1.07438, 1.02911 )
+texture = ExtResource( 2 )
+
+[node name="NETXButton" type="Button" parent="."]
+margin_left = 858.0
+margin_top = 523.0
+margin_right = 991.0
+margin_bottom = 583.0
+custom_fonts/font = SubResource( 1 )
+disabled = true
+text = "NEXT"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+reference_path = "res://src/StartUpScreen/BeginnerChallenge/BeginnerFinal/AreaBeginnerFinal.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Trapezoid" type="Sprite" parent="."]
+position = Vector2( 816.5, 144.25 )
+scale = Vector2( 0.262951, 0.395495 )
+texture = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 17.0
+margin_top = 103.0
+margin_right = 65.0
+margin_bottom = 115.0
+rect_scale = Vector2( 12.7824, 5.09583 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 27.0
+margin_top = 107.0
+margin_right = 627.0
+margin_bottom = 163.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Find the perimeter of the given trapezoid."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option1" type="Button" parent="." groups=["AnswerButtons"]]
+margin_left = 261.0
+margin_top = 322.0
+margin_right = 407.0
+margin_bottom = 376.0
+custom_fonts/font = SubResource( 3 )
+text = "20 cm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option2" type="Button" parent="." groups=["AnswerButtons"]]
+margin_left = 599.0
+margin_top = 321.0
+margin_right = 743.0
+margin_bottom = 375.0
+custom_fonts/font = SubResource( 4 )
+text = "35 cm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option3" type="Button" parent="." groups=["AnswerButtons"]]
+margin_left = 261.0
+margin_top = 425.0
+margin_right = 406.0
+margin_bottom = 481.0
+custom_fonts/font = SubResource( 5 )
+text = "55 cm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option4" type="Button" parent="." groups=["AnswerButtons"]]
+margin_left = 606.0
+margin_top = 428.0
+margin_right = 745.0
+margin_bottom = 476.0
+custom_fonts/font = SubResource( 6 )
+text = "35 cm"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WrongAns" type="WindowDialog" parent="."]
+margin_left = 330.0
+margin_top = 246.0
+margin_right = 683.0
+margin_bottom = 457.0
+window_title = "Good Try!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="WrongAns"]
+margin_right = 353.0
+margin_bottom = 209.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WrongAns"]
+margin_left = 58.0
+margin_top = 58.0
+margin_right = 370.0
+margin_bottom = 198.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 7 )
+text = "Good try...give it another shot. "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OutofAttempts" type="WindowDialog" parent="."]
+margin_left = 332.0
+margin_top = 245.0
+margin_right = 683.0
+margin_bottom = 458.0
+window_title = "Good Try!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="OutofAttempts"]
+margin_top = -2.0
+margin_right = 353.0
+margin_bottom = 215.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OutofAttempts"]
+margin_left = 28.0
+margin_top = 44.0
+margin_right = 356.0
+margin_bottom = 219.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 8 )
+text = "Good try. Sadly, you're out of attempts. Go ahead try another challenge."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightAns" type="WindowDialog" parent="."]
+margin_left = 837.0
+margin_top = 325.0
+margin_right = 1188.0
+margin_bottom = 539.0
+window_title = "Great Job!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="RightAns"]
+margin_left = -2.0
+margin_right = 353.0
+margin_bottom = 218.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RightAns"]
+margin_left = 17.0
+margin_top = 46.0
+margin_right = 350.0
+margin_bottom = 177.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 9 )
+text = "Great job! You completed this stage. Move on to the next stage on the map. You're doing great!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Option1" to="." method="_on_Option1_pressed"]
+[connection signal="pressed" from="Option2" to="." method="_on_Option2_pressed"]
+[connection signal="pressed" from="Option3" to="." method="_on_Option3_pressed"]
+[connection signal="pressed" from="Option4" to="." method="_on_Option4_pressed"]

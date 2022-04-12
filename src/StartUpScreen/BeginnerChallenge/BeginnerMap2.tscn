@@ -1,0 +1,186 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://assets/city_background.png" type="Texture" id=1]
+[ext_resource path="res://assets/hardwarestore.png" type="Texture" id=2]
+[ext_resource path="res://assets/candystore.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/cityhall.jpg" type="Texture" id=4]
+[ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=5]
+[ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/car.png" type="Texture" id=8]
+[ext_resource path="res://assets/road_icon.png" type="Texture" id=9]
+[ext_resource path="res://src/StartUpScreen/Go_Back_Button.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/scripts/BeginnerMapCode.gd" type="Script" id=11]
+[ext_resource path="res://src/scripts/MapToMenu.gd" type="Script" id=12]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 6 )
+
+[node name="Node2D2" type="Node2D"]
+position = Vector2( 5, 70 )
+scale = Vector2( 0.658919, 0.662279 )
+script = ExtResource( 11 )
+
+[node name="CityBackground" type="Sprite" parent="."]
+position = Vector2( 770.96, 348.796 )
+scale = Vector2( 2.56176, 2.99285 )
+texture = ExtResource( 1 )
+
+[node name="RoadIcon" type="Sprite" parent="CityBackground"]
+position = Vector2( 7.10903, 12.1084 )
+scale = Vector2( 0.389256, 0.250025 )
+texture = ExtResource( 9 )
+
+[node name="Car" type="Sprite" parent="CityBackground"]
+position = Vector2( 16.5878, 130.669 )
+scale = Vector2( 0.19572, 0.181519 )
+texture = ExtResource( 8 )
+
+[node name="PerimeterActivity1" parent="." groups=["L1"] instance=ExtResource( 10 )]
+margin_left = 1004.68
+margin_top = 496.77
+margin_right = 1254.68
+margin_bottom = 569.77
+custom_colors/font_color_disabled = Color( 0.611765, 0.611765, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+disabled = true
+toggle_mode = true
+pressed = true
+text = "Perimeter"
+icon = ExtResource( 3 )
+flat = true
+align = 0
+expand_icon = true
+reference_path = "res://src/StartUpScreen/BeginnerChallenge/PerimeterBeginner.tscn"
+start_focused = false
+
+[node name="Final" parent="." instance=ExtResource( 10 )]
+margin_left = 767.924
+margin_top = 22.6491
+margin_right = 922.924
+margin_bottom = 80.6491
+custom_colors/font_color_disabled = Color( 0.611765, 0.611765, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+toggle_mode = true
+pressed = true
+text = "Final"
+icon = ExtResource( 4 )
+flat = true
+align = 0
+expand_icon = true
+reference_path = "res://src/StartUpScreen/BeginnerChallenge/BeginnerFinal/PeriBeginnerFinal.tscn"
+start_focused = false
+
+[node name="PerimeterActivity2" parent="." instance=ExtResource( 10 )]
+margin_left = 452.0
+margin_top = 222.0
+margin_right = 714.0
+margin_bottom = 310.0
+custom_colors/font_color_disabled = Color( 0.611765, 0.611765, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+disabled = true
+toggle_mode = true
+pressed = true
+text = "Perimeter"
+icon = ExtResource( 3 )
+flat = true
+align = 0
+expand_icon = true
+reference_path = "res://src/StartUpScreen/BeginnerChallenge/PerimeterBeginner.tscn"
+start_focused = false
+
+[node name="Area1" parent="." groups=["L1"] instance=ExtResource( 10 )]
+margin_left = 466.0
+margin_top = 501.0
+margin_right = 671.0
+margin_bottom = 571.0
+custom_colors/font_color_disabled = Color( 0.611765, 0.611765, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+disabled = true
+toggle_mode = true
+text = "Area"
+icon = ExtResource( 2 )
+flat = true
+clip_text = true
+align = 0
+expand_icon = true
+reference_path = "res://src/StartUpScreen/BeginnerChallenge/AreaBeginner.tscn"
+start_focused = false
+
+[node name="Area2" parent="." instance=ExtResource( 10 )]
+margin_left = 1009.23
+margin_top = 238.57
+margin_right = 1214.23
+margin_bottom = 311.57
+custom_colors/font_color_disabled = Color( 0.611765, 0.611765, 0.611765, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+disabled = true
+toggle_mode = true
+pressed = true
+text = "Area"
+icon = ExtResource( 2 )
+flat = true
+clip_text = true
+align = 0
+expand_icon = true
+reference_path = "res://src/StartUpScreen/BeginnerChallenge/AreaBeginner.tscn"
+start_focused = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="Back_Button" parent="." instance=ExtResource( 10 )]
+margin_left = 1381.05
+margin_top = 712.691
+margin_right = 1475.05
+margin_bottom = 766.691
+custom_fonts/font = SubResource( 2 )
+script = ExtResource( 12 )
+start_focused = false
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="Back_Button"]
+margin_left = -855.948
+margin_top = -421.273
+margin_right = -455.948
+margin_bottom = -281.273
+rect_min_size = Vector2( 400, 140 )
+popup_exclusive = true
+window_title = "Are you sure?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Back_Button/ConfirmationDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -62.0
+margin_right = 192.0
+margin_bottom = 34.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "If you go back, you will lose your current progress. Are you sure you want to return to the main menu?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="PerimeterActivity1" to="." method="_on_PerimeterActivity1_pressed"]
+[connection signal="pressed" from="PerimeterActivity2" to="." method="_on_PerimeterActivity2_pressed"]
+[connection signal="pressed" from="Area1" to="." method="_on_Area1_pressed"]
+[connection signal="pressed" from="Area2" to="." method="_on_Area2_pressed"]
+[connection signal="confirmed" from="Back_Button/ConfirmationDialog" to="Back_Button" method="_on_ConfirmationDialog_confirmed"]
