@@ -74,7 +74,7 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/AdvancedMap.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AdvancedMap.tscn"
 
 [node name="Quit Button" type="Button" parent="VBoxContainer"]
 light_mask = 3

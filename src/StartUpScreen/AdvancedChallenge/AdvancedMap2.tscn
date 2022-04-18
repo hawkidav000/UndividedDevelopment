@@ -1,33 +1,38 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://src/StartUpScreen/AdvMapCode.gd" type="Script" id=1]
-[ext_resource path="res://src/StartUpScreen/Go_Back_Button.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://src/StartUpScreen/button_script.gd" type="Script" id=4]
-[ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=5]
-[ext_resource path="res://assets/car.png" type="Texture" id=6]
-[ext_resource path="res://assets/hardwarestore.png" type="Texture" id=7]
-[ext_resource path="res://assets/soda_store_icon.jpg" type="Texture" id=8]
-[ext_resource path="res://assets/cityhall.jpg" type="Texture" id=9]
-[ext_resource path="res://assets/city_background.png" type="Texture" id=10]
-[ext_resource path="res://assets/road.png" type="Texture" id=11]
-[ext_resource path="res://assets/candystore.jpg" type="Texture" id=12]
+[ext_resource path="res://src/StartUpScreen/Go_Back_Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/candystore.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/car.png" type="Texture" id=3]
+[ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=4]
+[ext_resource path="res://src/scripts/AdvMapCode.gd" type="Script" id=5]
+[ext_resource path="res://assets/soda_store_icon.jpg" type="Texture" id=6]
+[ext_resource path="res://src/scripts/MapToMenu.gd" type="Script" id=7]
+[ext_resource path="res://assets/cityhall.jpg" type="Texture" id=8]
+[ext_resource path="res://assets/road.png" type="Texture" id=9]
+[ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=10]
+[ext_resource path="res://assets/city_background.png" type="Texture" id=11]
+[ext_resource path="res://assets/hardwarestore.png" type="Texture" id=12]
+[ext_resource path="res://src/scripts/button_script.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
-font_data = ExtResource( 3 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 5, 70 )
 scale = Vector2( 0.658919, 0.662279 )
-script = ExtResource( 1 )
+script = ExtResource( 5 )
 
 [node name="CityBackground" type="Sprite" parent="."]
 position = Vector2( 770.733, 349.108 )
 scale = Vector2( 2.56176, 2.99285 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
-[node name="PerimeterActivity1" type="Button" parent="." groups=["Level1"] instance=ExtResource( 2 )]
+[node name="PerimeterActivity1" type="Button" parent="." groups=["Level1"] instance=ExtResource( 1 )]
 margin_left = 672.313
 margin_top = 537.538
 margin_right = 922.313
@@ -39,18 +44,18 @@ custom_fonts/font = SubResource( 1 )
 disabled = true
 toggle_mode = true
 text = "Perimeter"
-icon = ExtResource( 12 )
+icon = ExtResource( 2 )
 flat = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/PerimeterAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/PerimeterAdv2.tscn"
 start_focused = true
 
-[node name="Final" type="Button" parent="." instance=ExtResource( 2 )]
+[node name="Final" type="Button" parent="." instance=ExtResource( 1 )]
 margin_left = 673.831
 margin_top = 10.5696
 margin_right = 828.831
@@ -61,18 +66,18 @@ custom_fonts/font = SubResource( 1 )
 toggle_mode = true
 pressed = true
 text = "Final"
-icon = ExtResource( 9 )
+icon = ExtResource( 8 )
 flat = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/FinalChallengePhase/FinalArea.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/FinalChallengePhase/FinalArea.tscn"
 start_focused = true
 
-[node name="PerimeterActivity2" type="Button" parent="." groups=["Level2"] instance=ExtResource( 2 )]
+[node name="PerimeterActivity2" type="Button" parent="." groups=["Level2"] instance=ExtResource( 1 )]
 margin_left = 203.363
 margin_top = 351.815
 margin_right = 453.363
@@ -84,18 +89,18 @@ disabled = true
 toggle_mode = true
 pressed = true
 text = "Perimeter"
-icon = ExtResource( 12 )
+icon = ExtResource( 2 )
 flat = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/PerimeterAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/PerimeterAdv2.tscn"
 start_focused = true
 
-[node name="PerimeterActivity3" type="Button" parent="." groups=["Level3"] instance=ExtResource( 2 )]
+[node name="PerimeterActivity3" type="Button" parent="." groups=["Level3"] instance=ExtResource( 1 )]
 margin_left = 1113.95
 margin_top = 157.033
 margin_right = 1363.95
@@ -106,18 +111,18 @@ custom_fonts/font = SubResource( 1 )
 disabled = true
 toggle_mode = true
 text = "Perimeter"
-icon = ExtResource( 12 )
+icon = ExtResource( 2 )
 flat = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/PerimeterAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/PerimeterAdv2.tscn"
 start_focused = true
 
-[node name="Area1" type="Button" parent="." groups=["Level1"] instance=ExtResource( 2 )]
+[node name="Area1" type="Button" parent="." groups=["Level1"] instance=ExtResource( 1 )]
 margin_left = 215.504
 margin_top = 548.107
 margin_right = 420.504
@@ -130,19 +135,19 @@ disabled = true
 toggle_mode = true
 pressed = true
 text = "Area"
-icon = ExtResource( 7 )
+icon = ExtResource( 12 )
 flat = true
 clip_text = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/AreaAdv.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AreaAdv.tscn"
 start_focused = true
 
-[node name="Area2" type="Button" parent="." groups=["Level2"] instance=ExtResource( 2 )]
+[node name="Area2" type="Button" parent="." groups=["Level2"] instance=ExtResource( 1 )]
 margin_left = 1128.0
 margin_top = 367.0
 margin_right = 1333.0
@@ -153,19 +158,19 @@ custom_fonts/font = SubResource( 1 )
 disabled = true
 toggle_mode = true
 text = "Area"
-icon = ExtResource( 7 )
+icon = ExtResource( 12 )
 flat = true
 clip_text = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/AreaAdv.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AreaAdv.tscn"
 start_focused = true
 
-[node name="Area3" type="Button" parent="." groups=["Level3"] instance=ExtResource( 2 )]
+[node name="Area3" type="Button" parent="." groups=["Level3"] instance=ExtResource( 1 )]
 margin_left = 672.313
 margin_top = 172.133
 margin_right = 860.313
@@ -176,19 +181,19 @@ custom_fonts/font = SubResource( 1 )
 disabled = true
 toggle_mode = true
 text = "Area"
-icon = ExtResource( 7 )
+icon = ExtResource( 12 )
 flat = true
 clip_text = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/AreaAdv.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AreaAdv.tscn"
 start_focused = true
 
-[node name="VolumeActivity1" type="Button" parent="." groups=["Level1"] instance=ExtResource( 2 )]
+[node name="VolumeActivity1" type="Button" parent="." groups=["Level1"] instance=ExtResource( 1 )]
 margin_left = 1121.53
 margin_top = 534.518
 margin_right = 1329.54
@@ -200,18 +205,18 @@ custom_fonts/font = SubResource( 1 )
 disabled = true
 toggle_mode = true
 text = "Volume"
-icon = ExtResource( 8 )
+icon = ExtResource( 6 )
 flat = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/VolumeAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/VolumeAdv2.tscn"
 start_focused = true
 
-[node name="VolumeActivity2" type="Button" parent="." groups=["Level2"] instance=ExtResource( 2 )]
+[node name="VolumeActivity2" type="Button" parent="." groups=["Level2"] instance=ExtResource( 1 )]
 margin_left = 676.866
 margin_top = 360.875
 margin_right = 890.866
@@ -222,18 +227,18 @@ custom_fonts/font = SubResource( 1 )
 disabled = true
 toggle_mode = true
 text = "Volume"
-icon = ExtResource( 8 )
+icon = ExtResource( 6 )
 flat = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/VolumeAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/VolumeAdv2.tscn"
 start_focused = true
 
-[node name="VolumeActivity3" type="Button" parent="." groups=["Level3"] instance=ExtResource( 2 )]
+[node name="VolumeActivity3" type="Button" parent="." groups=["Level3"] instance=ExtResource( 1 )]
 margin_left = 207.916
 margin_top = 157.034
 margin_right = 415.924
@@ -245,45 +250,72 @@ disabled = true
 toggle_mode = true
 pressed = true
 text = "Volume"
-icon = ExtResource( 8 )
+icon = ExtResource( 6 )
 flat = true
 align = 0
 expand_icon = true
-script = ExtResource( 4 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-reference_path = "res://src/StartUpScreen/VolumeAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/VolumeAdv2.tscn"
 start_focused = true
 
-[node name="Back_Button" type="Button" parent="." instance=ExtResource( 2 )]
+[node name="Back_Button" type="Button" parent="." instance=ExtResource( 1 )]
 margin_left = 1381.05
 margin_top = 712.691
 margin_right = 1475.05
 margin_bottom = 766.691
 custom_fonts/font = SubResource( 1 )
 text = "Back"
-script = ExtResource( 4 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+start_focused = false
 reference_path = "res://src/StartUpScreen/Menu.tscn"
-start_focused = true
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="Back_Button"]
+margin_left = -855.948
+margin_top = -421.273
+margin_right = -455.948
+margin_bottom = -281.273
+rect_min_size = Vector2( 400, 140 )
+popup_exclusive = true
+window_title = "Are you sure?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Back_Button/ConfirmationDialog"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -192.0
+margin_top = -62.0
+margin_right = 192.0
+margin_bottom = 34.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "If you go back, you will lose your current progress. Are you sure you want to return to the main menu?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SceneMusic" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 10 )
 volume_db = 1.0
 autoplay = true
 
 [node name="Road" type="Sprite" parent="."]
 position = Vector2( 716.325, 397.114 )
 scale = Vector2( 0.823932, 0.749206 )
-texture = ExtResource( 11 )
+texture = ExtResource( 9 )
 
 [node name="Car" type="Sprite" parent="."]
 position = Vector2( 729.225, 746.664 )
 scale = Vector2( 0.568777, 0.423421 )
-texture = ExtResource( 6 )
+texture = ExtResource( 3 )
 
 [connection signal="pressed" from="PerimeterActivity1" to="." method="_on_PerimeterActivity1_pressed"]
 [connection signal="pressed" from="PerimeterActivity2" to="." method="_on_PerimeterActivity2_pressed"]
@@ -294,4 +326,4 @@ texture = ExtResource( 6 )
 [connection signal="pressed" from="VolumeActivity1" to="." method="_on_VolumeActivity1_pressed"]
 [connection signal="pressed" from="VolumeActivity2" to="." method="_on_VolumeActivity2_pressed"]
 [connection signal="pressed" from="VolumeActivity3" to="." method="_on_VolumeActivity3_pressed"]
-[connection signal="pressed" from="Back_Button" to="." method="_on_Back_Button_pressed"]
+[connection signal="confirmed" from="Back_Button/ConfirmationDialog" to="Back_Button" method="_on_ConfirmationDialog_confirmed"]

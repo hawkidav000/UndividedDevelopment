@@ -9,9 +9,9 @@
 [ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=7]
 [ext_resource path="res://assets/road.png" type="Texture" id=8]
 [ext_resource path="res://assets/car.png" type="Texture" id=9]
-[ext_resource path="res://src/StartUpScreen/AdvMapCode.gd" type="Script" id=10]
+[ext_resource path="res://src/scripts/AdvMapCode.gd" type="Script" id=10]
 [ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=11]
-[ext_resource path="res://src/StartUpScreen/MapToMenu.gd" type="Script" id=12]
+[ext_resource path="res://src/scripts/MapToMenu.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
@@ -46,7 +46,7 @@ icon = ExtResource( 2 )
 flat = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/PerimeterAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/PerimeterAdv2.tscn"
 
 [node name="Final" parent="." instance=ExtResource( 1 )]
 margin_left = 673.831
@@ -64,7 +64,7 @@ icon = ExtResource( 6 )
 flat = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/FinalChallengePhase/FinalArea.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/FinalChallengePhase/FinalArea.tscn"
 
 [node name="PerimeterActivity2" parent="." groups=["Level2"] instance=ExtResource( 1 )]
 margin_left = 203.363
@@ -82,7 +82,7 @@ icon = ExtResource( 2 )
 flat = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/PerimeterAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/PerimeterAdv2.tscn"
 
 [node name="PerimeterActivity3" parent="." groups=["Level3"] instance=ExtResource( 1 )]
 margin_left = 1113.95
@@ -99,7 +99,7 @@ icon = ExtResource( 2 )
 flat = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/PerimeterAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/PerimeterAdv2.tscn"
 
 [node name="Area1" parent="." groups=["Level1"] instance=ExtResource( 1 )]
 margin_left = 215.504
@@ -117,7 +117,7 @@ flat = true
 clip_text = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/AreaAdv.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AreaAdv.tscn"
 
 [node name="Area2" parent="." groups=["Level2"] instance=ExtResource( 1 )]
 margin_left = 1128.0
@@ -135,7 +135,7 @@ flat = true
 clip_text = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/AreaAdv.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AreaAdv.tscn"
 
 [node name="Area3" parent="." groups=["Level3"] instance=ExtResource( 1 )]
 margin_left = 672.313
@@ -154,7 +154,7 @@ flat = true
 clip_text = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/AreaAdv.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AreaAdv.tscn"
 
 [node name="VolumeActivity1" parent="." groups=["Level1"] instance=ExtResource( 1 )]
 margin_left = 1121.53
@@ -170,7 +170,7 @@ icon = ExtResource( 3 )
 flat = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/VolumeAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/VolumeAdv2.tscn"
 
 [node name="VolumeActivity2" parent="." groups=["Level2"] instance=ExtResource( 1 )]
 margin_left = 676.866
@@ -188,7 +188,7 @@ icon = ExtResource( 3 )
 flat = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/VolumeAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/VolumeAdv2.tscn"
 
 [node name="VolumeActivity3" parent="." groups=["Level3"] instance=ExtResource( 1 )]
 margin_left = 207.916
@@ -206,7 +206,7 @@ icon = ExtResource( 3 )
 flat = true
 align = 0
 expand_icon = true
-reference_path = "res://src/StartUpScreen/VolumeAdv2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/VolumeAdv2.tscn"
 
 [node name="Back_Button" parent="." instance=ExtResource( 1 )]
 margin_left = 1381.05
@@ -234,10 +234,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -188.0
-margin_top = -22.5
-margin_right = 188.0
-margin_bottom = 22.5
+margin_left = -192.0
+margin_top = -62.0
+margin_right = 192.0
+margin_bottom = 34.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "If you go back, you will lose your current progress. Are you sure you want to return to the main menu?"
 __meta__ = {

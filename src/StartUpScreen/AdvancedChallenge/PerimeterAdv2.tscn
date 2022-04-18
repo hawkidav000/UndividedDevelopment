@@ -1,19 +1,18 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/StartUpScreen/Go_Back_Button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://CandyShop.png" type="Texture" id=2]
+[ext_resource path="res://assets/CandyShop.png" type="Texture" id=2]
 [ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=3]
-[ext_resource path="res://src/StartUpScreen/EnterButton.gd" type="Script" id=4]
-[ext_resource path="res://src/StartUpScreen/LinkButton.gd" type="Script" id=5]
-[ext_resource path="res://drop_zone.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Draggable_GumDrop.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/scripts/EnterButton.gd" type="Script" id=4]
+[ext_resource path="res://src/scripts/LinkButton.gd" type="Script" id=5]
+[ext_resource path="res://src/drop_zone.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Draggable_GumDrop.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assets/gbhouse.jpeg" type="Texture" id=8]
 [ext_resource path="res://assets/white.png" type="Texture" id=9]
-[ext_resource path="res://src/StartUpScreen/HelpButton.gd" type="Script" id=10]
+[ext_resource path="res://src/scripts/HelpButton.gd" type="Script" id=10]
 [ext_resource path="res://assets/Triangle.png" type="Texture" id=11]
 [ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=12]
 [ext_resource path="res://assets/POP.mp3" type="AudioStream" id=13]
-[ext_resource path="res://src/StartUpScreen/PeppermintBackground.gd" type="Script" id=14]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -72,7 +71,7 @@ margin_top = 531.0
 margin_right = 996.0
 margin_bottom = 585.0
 disabled = true
-reference_path = "res://src/StartUpScreen/AdvancedMap2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AdvancedMap2.tscn"
 
 [node name="QuestionBackground" type="ColorRect" parent="."]
 margin_left = 37.0
@@ -295,7 +294,6 @@ position = Vector2( 840, 326 )
 scale = Vector2( 0.317538, 0.317538 )
 z_index = -1
 texture = ExtResource( 9 )
-script = ExtResource( 14 )
 
 [node name="PeppermintSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )

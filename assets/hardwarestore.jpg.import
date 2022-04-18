@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hardwarestore.jpg-09dca33b0fb53911ac011a3e1ef85d14.stex"
+path="res://.import/hardwarestore.jpg-bbdf26b9101d350b8c103f94d092ee21.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/hardwarestore.jpg"
-dest_files=[ "res://.import/hardwarestore.jpg-09dca33b0fb53911ac011a3e1ef85d14.stex" ]
+source_file="res://assets/hardwarestore.jpg"
+dest_files=[ "res://.import/hardwarestore.jpg-bbdf26b9101d350b8c103f94d092ee21.stex" ]
 
 [params]
 

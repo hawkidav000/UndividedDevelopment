@@ -38,7 +38,7 @@ func _ready():
 func save_scene():
 	var packed_scene = PackedScene.new()
 	packed_scene.pack(get_tree().get_current_scene())
-	ResourceSaver.save("res://src/StartUpScreen/AdvancedMap2.tscn", packed_scene)
+	ResourceSaver.save("res://src/StartUpScreen/AdvancedChallenge/AdvancedMap2.tscn", packed_scene)
 	
 
 func _on_PerimeterActivity1_pressed():

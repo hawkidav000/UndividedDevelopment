@@ -1,15 +1,15 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://src/StartUpScreen/Go_Back_Button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://volume-jar.png" type="Texture" id=2]
-[ext_resource path="res://test_gravity.gd" type="Script" id=3]
+[ext_resource path="res://assets/volume-jar.png" type="Texture" id=2]
+[ext_resource path="res://src/scripts/test_gravity.gd" type="Script" id=3]
 [ext_resource path="res://assets/soda_shop.jpg" type="Texture" id=4]
 [ext_resource path="res://assets/CALIBRI.TTF" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/VolumeRectanglePrism.jpg" type="Texture" id=6]
-[ext_resource path="res://src/StartUpScreen/HelpButton.gd" type="Script" id=7]
-[ext_resource path="res://src/StartUpScreen/VolumeEnterButton.gd" type="Script" id=8]
+[ext_resource path="res://src/scripts/HelpButton.gd" type="Script" id=7]
+[ext_resource path="res://src/scripts/VolumeEnterButton.gd" type="Script" id=8]
 [ext_resource path="res://assets/CandyMusic.mp3" type="AudioStream" id=9]
-[ext_resource path="res://src/StartUpScreen/VolumeAdvLinkButton.gd" type="Script" id=10]
+[ext_resource path="res://src/scripts/VolumeAdvLinkButton.gd" type="Script" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 94, 1.25 )
@@ -168,7 +168,7 @@ margin_top = 528.24
 margin_right = 994.111
 margin_bottom = 582.24
 disabled = true
-reference_path = "res://src/StartUpScreen/AdvancedMap2.tscn"
+reference_path = "res://src/StartUpScreen/AdvancedChallenge/AdvancedMap2.tscn"
 
 [node name="QuestionPromptBackground" type="ColorRect" parent="."]
 margin_left = 27.0
@@ -216,7 +216,6 @@ __meta__ = {
 }
 
 [node name="HelpWindowDialog" type="WindowDialog" parent="HelpButton"]
-visible = true
 margin_left = -368.0
 margin_top = -480.0
 margin_right = 600.0
