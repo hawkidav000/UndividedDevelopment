@@ -1,6 +1,6 @@
 extends Node2D
 
-var Ball = load("res://Falling_Sprite.tscn")
+var Ball = load("res://src/Falling_Sprite.tscn")
 
 
 #func _draw():
